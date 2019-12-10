@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+
+
+.accueil{
+padding:0;
+margin:0;	
+background: linear-gradient(#e66465, #FEF5E7 );	
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 18px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  background-color:#2c150da3;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+ border-bottom: 2px solid white;
+ height:18px;
+}
+.divfilm > a{
+text-decoration:none;
+color:white;
+font-size:25px;	
+margin-left:3%;
+font-family: 'Lobster', cursive;
+}
+	
+.divfilm > img{
+width:20%;
+min-width:200px;	
+height:75%;
+border: 2px solid black;
+margin-left:30%;
+}
+
+.divfilm{
+display:flex;
+align-items:center;
+margin-top:5%;
+height:80%;
+background-image:url(../img/fonddivfilm.jpg);
+background-size:cover;
+background-attachment:fixed;		
+}
+
+.divsport{
+margin-top:5%;
+height:80%;
+background-image:url(../img/sport.jpg);
+background-size:cover;
+background-attachment:fixed;	
+display:flex;
+justify-content:space-between;	
+}
+
+.divsport > img{
+border-radius:30px;
+margin-top:10%;
+height:70%;
+width:30%;
+}
+
+.divsport > a{
+text-decoration:none;
+color:white;
+font-size:25px;	
+font-family: 'Anton', sans-serif;
+}
+
+.divjeux{
+display:flex;
+align-items:center;
+margin-top:5%;
+height:80%;
+background-image:url(../img/fonddivjeux.jpg);
+background-size:cover;
+background-attachment:fixed;	
+}
+
+.divjeux > img{
+border-radius:30px;
+height:40%;
+width:20%;
+}
