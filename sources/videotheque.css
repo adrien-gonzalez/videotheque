@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
 
 
 
 .accueil{
 padding:0;
 margin:0;	
-background: linear-gradient(#e66465, #FEF5E7 );	
+background-color:#FAE5D3;
 }
+
+.categorie2{	
+padding:0;
+margin:0;
+background-image:url(../img/ca.jpg);
+background-attachment:fixed;		
+}	
+
+.categorie3{	
+padding:0;
+margin:0;
+background-image:url(../img/fondjeux.jpg);
+background-attachment:fixed;		
+}	
 
 
 ul {
@@ -45,12 +61,23 @@ margin-left:3%;
 font-family: 'Lobster', cursive;
 }
 	
-.divfilm > img{
+
+
+.zoom{
 width:20%;
 min-width:200px;	
 height:75%;
 border: 2px solid black;
 margin-left:30%;
+width:20%;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+.zoom:hover{
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
 }
 
 .divfilm{
@@ -90,11 +117,20 @@ font-family: 'Anton', sans-serif;
 .divjeux{
 display:flex;
 align-items:center;
+justify-content:flex-end;
 margin-top:5%;
 height:80%;
 background-image:url(../img/fonddivjeux.jpg);
 background-size:cover;
 background-attachment:fixed;	
+}
+
+.divjeux > a{
+text-decoration:none;
+font-family: 'Bangers', cursive;
+color:white;
+font-size:30px;
+margin-right:10%;
 }
 
 .divjeux > img{
@@ -103,27 +139,249 @@ height:40%;
 width:20%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.bandeannonceca1{
+display:flex;
+flex-direction:column;
+align-items:center;
+color:white;
+width:50%;
+font-family: 'Bangers', cursive;
 }
 
-.neon {
+.bandeannonces{
+display:flex;
+flex-direction:column;
+align-items:center;
+color:white;
+width:50%;
+font-family: 'Bangers', cursive;
+}
+
+
+.bandeannonce > h1{
+font-size:35px;	
+}
+
+.bandeannonce{
+display:flex;
+flex-direction:column;
+align-items:center;
+color:white;
+width:50%;
+font-family: 'Bangers', cursive;
+}
+
+
+.bandeannonceca{
+display:flex;
+margin-top:15%;
+justify-content:space-between;	
+height:auto;
+}
+
+footer{
+display:flex;
+justify-content:space-between;
+height:15%;	
+margin-top:5%;
+background-color:#2c150da3;
+	
+}
+
+.ulfooter {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 18px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-family: 'Titillium Web', sans-serif;
+  background-color:#00000000;
+}
+
+
+.titrefilm {
     position: relative;
-    overflow: hidden;
-    filter: brightness(200%);
-    margin-top:10px;
-    
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: calc(10px + 10vw);
+    font-weight: 700;
+    color: #f5f5f5;
+	text-align:center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    perspective: 500px;
 }
+
+.titrefilm::before,
+.titrefilm::after {
+    content: attr(aria-label);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-shadow: 0.01em 0.01em 0.01em rgba(0, 0, 0, 0.3);
+}
+
+.titrefilm::before {
+    animation: floatAbove 3.5s ease-in-out infinite;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+
+.titrefilm::after {
+    opacity: 0.65;
+    filter: blur(0.02em);
+    transform: translate(-50%, -50%) rotateX(21deg);
+    animation: floatBelow 3.5s ease-in-out infinite;
+    -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+@keyframes floatAbove {
+    50% {
+        transform: translate(-50%, -60%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+    }
+}
+
+@keyframes floatBelow {
+    50% {
+        transform: translate(-50%, -60%) rotateX(10deg);
+        -webkit-clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+                clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+    }
+}
+
+.autresfilms{
+display:flex;
+justify-content:space-between;	
+height:auto;
+}
+
+.titreautrefilms{
+color:white;
+text-align:center;	
+margin-top:8%;
+font-family: 'Bangers', cursive;
+font-size:35px;	
+}
+
+.affichesfilms{
+display:flex;
+justify-content:space-between;
+}
+
+.titreaffiche {
+display:flex;
+justify-content:space-between;
+margin-top: 15%;
+}
+
+.titreaffiche > a{
+color: white;
+font-size:30px;
+font-family: 'Bangers', cursive;
+}
+
+.affichesfilms > img{
+width:20%;	
+}
+
+.descriptiongw2{
+display:flex;
+align-items:center;	
+width:50%;
+flex-direction:column;
+justify-content:center;
+font-family: 'Lilita One', cursive;
+font-size:20px;
+color: white; 
+text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.jeux-gw2{
+display:flex;
+margin-top:5%;
+justify-content:space-between;
+}
+
+.jeux-monster{
+display:flex;
+margin-top:15%;
+justify-content:space-between;
+}
+
+.descriptionmonster{
+display:flex;
+align-items:center;	
+width:50%;
+flex-direction:column;
+justify-content:center;
+font-family: 'Lilita One', cursive;
+font-size:20px;
+color: white; 
+text-shadow: black 0.1em 0.1em 0.2em;	
+margin-left:3%;	
+}
+
+.autresjeux{
+display:flex;
+justify-content:space-between;
+margin-top: 5%;
+}
+
+
+$avatar-size: 32px;
+
+@font-face {
+	font-family: "ubuntu";
+	font-style: italic;
+	font-weight: 300;
+	src: local("Lato Light Italic"), local("Lato-LightItalic"),
+		url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2)
+			format("woff2");
+}
+
+
+
+.wrapper {
+	text-align: center;
+}
+
+.titrecategorie3 {
+		color: #fff;
+		font-size: 92px;
+		font-family: "ubuntu";
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: "Josefin Sans", sans-serif;
+		background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+		background-size: auto auto;
+		background-clip: border-box;
+		background-size: 200% auto;
+		color: #fff;
+		background-clip: text;
+		text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textclip 1.5s linear infinite;
+		display: inline-block;
+	}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+.autresvideos{
+text-align:center;
+color: white;
+text-shadow: black 0.1em 0.1em 0.2em;
+font-size:35px;	
+margin-top:15%;		
+}
+
+
 
 .text {
     background-color: black;
@@ -184,12 +442,8 @@ width:20%;
     }
 }
   .sport{
-    /* background-image: url(../img/complexesportif.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
     padding:0;
-    margin:0; */
+    margin:0; 
     background-color:black;
     
   }
@@ -203,9 +457,9 @@ width:20%;
     }
       
     .divfoot2 > img{
-    width:20%;
+    width:30%;
     min-width:200px;	
-    height:60%;
+    height:50%;
     border: 2px solid black;
     
     }
